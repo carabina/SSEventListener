@@ -38,6 +38,24 @@ static NSObject *appNotificationReceiver = nil;
     objc_setAssociatedObject(self, SSApplicationEventListenerKey, nil, OBJC_ASSOCIATION_COPY);
 }
 
+#pragma mark - Application Event Dispatcher
+
+- (void)p_dispatchApplicationEvent:(NSNotificationName)notificationName application:(UIApplication *)application {
+    [listenerObjs enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
+        id (^getWeakObjBlock)(void) = obj;
+        id weakObj = getWeakObjBlock();
+        if (weakObj) {
+            SSApplicationEventListener listener = objc_getAssociatedObject(weakObj, SSApplicationEventListenerKey);
+            if (listener) {
+                listener(notificationName, application);
+            }
+        } else {
+            [listenerObjs removeObject:obj];
+        }
+        
+    }];
+}
+
 #pragma mark - Application Notification Receiver
 
 + (void)p_setupApplicationNotification {
@@ -65,89 +83,71 @@ static NSObject *appNotificationReceiver = nil;
 }
 
 - (void)p_receivedUIApplicationDidEnterBackgroundNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationDidEnterBackgroundNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationDidEnterBackgroundNotification application:application];
 }
 
 - (void)p_receivedUIApplicationWillEnterForegroundNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationWillEnterForegroundNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationWillEnterForegroundNotification application:application];
 }
 
 - (void)p_receivedUIApplicationDidFinishLaunchingNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationDidFinishLaunchingNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationDidFinishLaunchingNotification application:application];
 }
 
 - (void)p_receivedUIApplicationDidBecomeActiveNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationDidBecomeActiveNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationDidBecomeActiveNotification application:application];
 }
 
 - (void)p_receivedUIApplicationWillResignActiveNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationWillResignActiveNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationWillResignActiveNotification application:application];
 }
 
 - (void)p_receivedUIApplicationDidReceiveMemoryWarningNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationDidReceiveMemoryWarningNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationDidReceiveMemoryWarningNotification application:application];
 }
 
 - (void)p_receivedUIApplicationWillTerminateNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationWillTerminateNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationWillTerminateNotification application:application];
 }
 
 - (void)p_receivedUIApplicationSignificantTimeChangeNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationSignificantTimeChangeNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationSignificantTimeChangeNotification application:application];
 }
 
 - (void)p_receivedUIApplicationWillChangeStatusBarOrientationNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationWillChangeStatusBarOrientationNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationWillChangeStatusBarOrientationNotification application:application];
 }
 
 - (void)p_receivedUIApplicationDidChangeStatusBarOrientationNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationDidChangeStatusBarOrientationNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationDidChangeStatusBarOrientationNotification application:application];
 }
 
 - (void)p_receivedUIApplicationStatusBarOrientationUserInfoKey:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationStatusBarOrientationUserInfoKey application:application];
+    [self p_dispatchApplicationEvent:UIApplicationStatusBarOrientationUserInfoKey application:application];
 }
 
 - (void)p_receivedUIApplicationWillChangeStatusBarFrameNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationWillChangeStatusBarFrameNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationWillChangeStatusBarFrameNotification application:application];
 }
 
 - (void)p_receivedUIApplicationDidChangeStatusBarFrameNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationDidChangeStatusBarFrameNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationDidChangeStatusBarFrameNotification application:application];
 }
 
 - (void)p_receivedUIApplicationStatusBarFrameUserInfoKey:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationStatusBarFrameUserInfoKey application:application];
+    [self p_dispatchApplicationEvent:UIApplicationStatusBarFrameUserInfoKey application:application];
 }
 
 - (void)p_receivedUIApplicationBackgroundRefreshStatusDidChangeNotification:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationBackgroundRefreshStatusDidChangeNotification application:application];
+    [self p_dispatchApplicationEvent:UIApplicationBackgroundRefreshStatusDidChangeNotification application:application];
 }
 
 - (void)p_receivedUIApplicationProtectedDataWillBecomeUnavailable:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationProtectedDataWillBecomeUnavailable application:application];
+    [self p_dispatchApplicationEvent:UIApplicationProtectedDataWillBecomeUnavailable application:application];
 }
 
 - (void)p_receivedUIApplicationProtectedDataDidBecomeAvailable:(UIApplication *)application {
-    [self p_handleApplicationEvent:UIApplicationProtectedDataDidBecomeAvailable application:application];
-}
-
-#pragma mark - Handle Application Event
-
-- (void)p_handleApplicationEvent:(NSNotificationName)notificationName application:(UIApplication *)application {
-    [listenerObjs enumerateObjectsUsingBlock:^(id  _Nonnull obj, BOOL * _Nonnull stop) {
-        id (^getWeakObjBlock)(void) = obj;
-        id weakObj = getWeakObjBlock();
-        if (weakObj) {
-            SSApplicationEventListener listener = objc_getAssociatedObject(weakObj, SSApplicationEventListenerKey);
-            if (listener) {
-                listener(notificationName, application);
-            }
-        } else {
-            [listenerObjs removeObject:obj];
-        }
-        
-    }];
+    [self p_dispatchApplicationEvent:UIApplicationProtectedDataDidBecomeAvailable application:application];
 }
 
 @end
