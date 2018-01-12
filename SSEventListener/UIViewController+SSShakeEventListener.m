@@ -1,5 +1,5 @@
 //
-//  UIViewController+SSEventListener.m
+//  UIViewController+SSShakeEventListener.m
 //  SSEventListener
 //
 //  Created by Shengsheng on 12/1/18.
