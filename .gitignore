@@ -4,8 +4,6 @@
 ## Build generated
 
 /info.plist
-AirSenseSDK.framework
-ASApplicationKeys.h-e
 **/builds/
 **/build/
 **/DerivedData/
