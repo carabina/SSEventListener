@@ -1,5 +1,5 @@
 //
-//  UIViewController+SSEventListener.h
+//  UIViewController+SSShakeEventListener.h
 //  SSEventListener
 //
 //  Created by Shengsheng on 12/1/18.
@@ -10,7 +10,7 @@
 
 typedef void(^SSShakeEventListener)(void);
 
-@interface UIViewController (SSEventListener)
+@interface UIViewController (SSShakeEventListener)
 
 - (void)ss_setShakeEventListener:(SSShakeEventListener)listener;
 

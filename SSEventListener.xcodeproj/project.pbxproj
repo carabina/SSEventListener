@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F9AC7DD12008D13800375AAA /* SSEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DCF2008D13800375AAA /* SSEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9AC7DDB2008D1B300375AAA /* UIViewController+SSEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC7DD72008D1B300375AAA /* UIViewController+SSEventListener.m */; };
-		F9AC7DDC2008D1B300375AAA /* UIViewController+SSEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DD82008D1B300375AAA /* UIViewController+SSEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9AC7DDD2008D1B300375AAA /* NSObject+SSEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DD92008D1B300375AAA /* NSObject+SSEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9AC7DDE2008D1B300375AAA /* NSObject+SSEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC7DDA2008D1B300375AAA /* NSObject+SSEventListener.m */; };
+		F9AC7DDB2008D1B300375AAA /* UIViewController+SSShakeEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC7DD72008D1B300375AAA /* UIViewController+SSShakeEventListener.m */; };
+		F9AC7DDC2008D1B300375AAA /* UIViewController+SSShakeEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DD82008D1B300375AAA /* UIViewController+SSShakeEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9AC7DDD2008D1B300375AAA /* NSObject+SSApplicationEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DD92008D1B300375AAA /* NSObject+SSApplicationEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9AC7DDE2008D1B300375AAA /* NSObject+SSApplicationEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F9AC7DCC2008D13800375AAA /* SSEventListener.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SSEventListener.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9AC7DCF2008D13800375AAA /* SSEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSEventListener.h; sourceTree = "<group>"; };
 		F9AC7DD02008D13800375AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9AC7DD72008D1B300375AAA /* UIViewController+SSEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SSEventListener.m"; sourceTree = "<group>"; };
-		F9AC7DD82008D1B300375AAA /* UIViewController+SSEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SSEventListener.h"; sourceTree = "<group>"; };
-		F9AC7DD92008D1B300375AAA /* NSObject+SSEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SSEventListener.h"; sourceTree = "<group>"; };
-		F9AC7DDA2008D1B300375AAA /* NSObject+SSEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SSEventListener.m"; sourceTree = "<group>"; };
+		F9AC7DD72008D1B300375AAA /* UIViewController+SSShakeEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SSShakeEventListener.m"; sourceTree = "<group>"; };
+		F9AC7DD82008D1B300375AAA /* UIViewController+SSShakeEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SSShakeEventListener.h"; sourceTree = "<group>"; };
+		F9AC7DD92008D1B300375AAA /* NSObject+SSApplicationEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SSApplicationEventListener.h"; sourceTree = "<group>"; };
+		F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SSApplicationEventListener.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +56,10 @@
 			children = (
 				F9AC7DD02008D13800375AAA /* Info.plist */,
 				F9AC7DCF2008D13800375AAA /* SSEventListener.h */,
-				F9AC7DD92008D1B300375AAA /* NSObject+SSEventListener.h */,
-				F9AC7DDA2008D1B300375AAA /* NSObject+SSEventListener.m */,
-				F9AC7DD82008D1B300375AAA /* UIViewController+SSEventListener.h */,
-				F9AC7DD72008D1B300375AAA /* UIViewController+SSEventListener.m */,
+				F9AC7DD92008D1B300375AAA /* NSObject+SSApplicationEventListener.h */,
+				F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */,
+				F9AC7DD82008D1B300375AAA /* UIViewController+SSShakeEventListener.h */,
+				F9AC7DD72008D1B300375AAA /* UIViewController+SSShakeEventListener.m */,
 			);
 			path = SSEventListener;
 			sourceTree = "<group>";
@@ -71,8 +71,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9AC7DDC2008D1B300375AAA /* UIViewController+SSEventListener.h in Headers */,
-				F9AC7DDD2008D1B300375AAA /* NSObject+SSEventListener.h in Headers */,
+				F9AC7DDC2008D1B300375AAA /* UIViewController+SSShakeEventListener.h in Headers */,
+				F9AC7DDD2008D1B300375AAA /* NSObject+SSApplicationEventListener.h in Headers */,
 				F9AC7DD12008D13800375AAA /* SSEventListener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -145,8 +145,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9AC7DDE2008D1B300375AAA /* NSObject+SSEventListener.m in Sources */,
-				F9AC7DDB2008D1B300375AAA /* UIViewController+SSEventListener.m in Sources */,
+				F9AC7DDE2008D1B300375AAA /* NSObject+SSApplicationEventListener.m in Sources */,
+				F9AC7DDB2008D1B300375AAA /* UIViewController+SSShakeEventListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

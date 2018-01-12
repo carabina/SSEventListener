@@ -1,5 +1,5 @@
 //
-//  NSObject+SSEventListener.h
+//  NSObject+SSApplicationEventListener.h
 //  SSEventListener
 //
 //  Created by Shengsheng on 12/1/18.
@@ -11,7 +11,7 @@
 
 typedef void(^SSApplicationEventListener)(NSNotificationName notificationName, UIApplication *application);
 
-@interface NSObject (SSEventListener)
+@interface NSObject (SSApplicationEventListener)
 
 - (void)ss_setApplicationEventListener:(SSApplicationEventListener)listener;
 

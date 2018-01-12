@@ -16,5 +16,5 @@ FOUNDATION_EXPORT const unsigned char SSEventListenerVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <SSEventListener/PublicHeader.h>
 
-#import <SSEventListener/NSObject+SSEventListener.h>
-#import <SSEventListener/UIViewController+SSEventListener.h>
+#import <SSEventListener/NSObject+SSApplicationEventListener.h>
+#import <SSEventListener/UIViewController+SSShakeEventListener.h>

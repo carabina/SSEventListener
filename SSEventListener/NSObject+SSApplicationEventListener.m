@@ -1,19 +1,19 @@
 //
-//  NSObject+SSEventListener.m
+//  NSObject+SSApplicationEventListener.m
 //  SSEventListener
 //
 //  Created by Shengsheng on 12/1/18.
 //  Copyright © 2018 Shengsheng. All rights reserved.
 //
 
-#import "NSObject+SSEventListener.h"
+#import "NSObject+SSApplicationEventListener.h"
 #import <objc/runtime.h>
 
 static void *SSApplicationEventListenerKey = "SSApplicationEventListenerKey";
 static NSMutableSet *listenerObjs = nil;
 static NSObject *appNotificationReceiver = nil;
 
-@implementation NSObject (SSEventListener)
+@implementation NSObject (SSApplicationEventListener)
 
 + (void)load {
     appNotificationReceiver = [NSObject new];

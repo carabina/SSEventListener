@@ -6,7 +6,7 @@
 //  Copyright © 2018 Shengsheng. All rights reserved.
 //
 
-#import "UIViewController+SSEventListener.h"
+#import "UIViewController+SSShakeEventListener.h"
 #import <objc/runtime.h>
 
 static const void *SSShakeEventListenerKey = "SSShakeEventListenerKey";
@@ -14,7 +14,7 @@ static const void *SSShakeEventListenerKey = "SSShakeEventListenerKey";
 typedef id _Nullable (*IMP_type)(id _Nonnull, SEL _Nonnull, ...);
 static IMP savedMotionEndedWithEventIMP = nil; // saved IMP for method motionEnded:withEvent: of the UIViewController class
 
-@implementation UIViewController (SSEventListener)
+@implementation UIViewController (SSShakeEventListener)
 
 + (void)load {
     [self p_enableShakeEventListener];
