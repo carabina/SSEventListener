@@ -33,7 +33,7 @@ typedef void(^SSLongPressViewEventListener)(UILongPressGestureRecognizer *recogn
  * @return A UIGestureRecognizer instance generated for the listener.
  *  Save this returned recognizer if you want to remove the listener using [UIView removeGestureRecognizer:] later.
  */
-- (UIGestureRecognizer *)ss_addTapEventListener:(SSTapViewEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired;
+- (UIGestureRecognizer *)ss_addTapViewEventListener:(SSTapViewEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired;
 
 /**
  * Add a long press listener to self.
@@ -44,6 +44,6 @@ typedef void(^SSLongPressViewEventListener)(UILongPressGestureRecognizer *recogn
  * @return A UILongPressGestureRecognizer instance generated for the listener.
  *  Save this returned recognizer if you want to remove the listener using [UIView removeGestureRecognizer:] later.
  */
-- (UILongPressGestureRecognizer *)ss_addLongPressEventListener:(SSLongPressViewEventListener)listener minimumPressDuration:(CFTimeInterval)minimumPressDuration;
+- (UILongPressGestureRecognizer *)ss_addLongPressViewEventListener:(SSLongPressViewEventListener)listener minimumPressDuration:(CFTimeInterval)minimumPressDuration;
 
 @end

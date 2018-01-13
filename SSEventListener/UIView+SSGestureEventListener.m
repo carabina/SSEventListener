@@ -15,8 +15,8 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
 
 #pragma mark - API
 
-- (UIGestureRecognizer *)ss_addTapEventListener:(SSTapViewEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired {
-    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleTapEvent:)];
+- (UIGestureRecognizer *)ss_addTapViewEventListener:(SSTapViewEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired {
+    UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleGestureEvent:)];
     [recognizer setNumberOfTapsRequired:numberOfTapsRequired];
 
     // set fail to each existing recognizer who's numberOfTapsRequired is smaller than taps
@@ -34,8 +34,8 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
     return recognizer;
 }
 
-- (UILongPressGestureRecognizer *)ss_addLongPressEventListener:(SSLongPressViewEventListener)listener minimumPressDuration:(CFTimeInterval)minimumPressDuration {
-    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleTapEvent:)];
+- (UILongPressGestureRecognizer *)ss_addLongPressViewEventListener:(SSLongPressViewEventListener)listener minimumPressDuration:(CFTimeInterval)minimumPressDuration {
+    UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleGestureEvent:)];
     recognizer.minimumPressDuration = minimumPressDuration;
 
     [self addGestureRecognizer:recognizer];
@@ -44,9 +44,9 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
     return recognizer;
 }
 
-#pragma mark - Tap Event Handler
+#pragma mark - Gesture Event Handler
 
-- (void)p_handleTapEvent:(UITapGestureRecognizer *)recognizer {
+- (void)p_handleGestureEvent:(UITapGestureRecognizer *)recognizer {
     SSTapViewEventListener listener = objc_getAssociatedObject(recognizer, SSGestureEventListenerKey);
     if (listener) {
         listener(recognizer);

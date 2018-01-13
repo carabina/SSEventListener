@@ -14,6 +14,8 @@
 		F9AC7DDE2008D1B300375AAA /* NSObject+SSApplicationEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */; };
 		F9E7F8A7200A0E2D006E2D46 /* UIView+SSGestureEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E7F8A5200A0E2D006E2D46 /* UIView+SSGestureEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9E7F8A8200A0E2D006E2D46 /* UIView+SSGestureEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F8A6200A0E2D006E2D46 /* UIView+SSGestureEventListener.m */; };
+		F9E7F8AB200A328A006E2D46 /* UIButton+SSTapEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E7F8A9200A328A006E2D46 /* UIButton+SSTapEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9E7F8AC200A328A006E2D46 /* UIButton+SSTapEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F8AA200A328A006E2D46 /* UIButton+SSTapEventListener.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SSApplicationEventListener.m"; sourceTree = "<group>"; };
 		F9E7F8A5200A0E2D006E2D46 /* UIView+SSGestureEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SSGestureEventListener.h"; sourceTree = "<group>"; };
 		F9E7F8A6200A0E2D006E2D46 /* UIView+SSGestureEventListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SSGestureEventListener.m"; sourceTree = "<group>"; };
+		F9E7F8A9200A328A006E2D46 /* UIButton+SSTapEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+SSTapEventListener.h"; sourceTree = "<group>"; };
+		F9E7F8AA200A328A006E2D46 /* UIButton+SSTapEventListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+SSTapEventListener.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				F9AC7DD72008D1B300375AAA /* UIViewController+SSShakeEventListener.m */,
 				F9E7F8A5200A0E2D006E2D46 /* UIView+SSGestureEventListener.h */,
 				F9E7F8A6200A0E2D006E2D46 /* UIView+SSGestureEventListener.m */,
+				F9E7F8A9200A328A006E2D46 /* UIButton+SSTapEventListener.h */,
+				F9E7F8AA200A328A006E2D46 /* UIButton+SSTapEventListener.m */,
 			);
 			path = SSEventListener;
 			sourceTree = "<group>";
@@ -80,6 +86,7 @@
 				F9AC7DDC2008D1B300375AAA /* UIViewController+SSShakeEventListener.h in Headers */,
 				F9AC7DDD2008D1B300375AAA /* NSObject+SSApplicationEventListener.h in Headers */,
 				F9E7F8A7200A0E2D006E2D46 /* UIView+SSGestureEventListener.h in Headers */,
+				F9E7F8AB200A328A006E2D46 /* UIButton+SSTapEventListener.h in Headers */,
 				F9AC7DD12008D13800375AAA /* SSEventListener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E7F8AC200A328A006E2D46 /* UIButton+SSTapEventListener.m in Sources */,
 				F9AC7DDE2008D1B300375AAA /* NSObject+SSApplicationEventListener.m in Sources */,
 				F9E7F8A8200A0E2D006E2D46 /* UIView+SSGestureEventListener.m in Sources */,
 				F9AC7DDB2008D1B300375AAA /* UIViewController+SSShakeEventListener.m in Sources */,

@@ -27,9 +27,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qK-Kf-RO5">
                                 <rect key="frame" x="102" y="318" width="171" height="30"/>
                                 <state key="normal" title="Set Shake Event Listener"/>
-                                <connections>
-                                    <action selector="switchButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fd8-uR-STa"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlw-x5-AFA">
                                 <rect key="frame" x="84" y="368" width="207" height="131"/>
@@ -64,7 +61,7 @@
                     </view>
                     <connections>
                         <outlet property="gestureView" destination="Dlw-x5-AFA" id="3xr-Tm-ZDP"/>
-                        <outlet property="switchButton" destination="6qK-Kf-RO5" id="2yw-qu-i4g"/>
+                        <outlet property="shakeSwitchButton" destination="6qK-Kf-RO5" id="FIH-br-dC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
