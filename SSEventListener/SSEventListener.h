@@ -18,3 +18,4 @@ FOUNDATION_EXPORT const unsigned char SSEventListenerVersionString[];
 
 #import <SSEventListener/NSObject+SSApplicationEventListener.h>
 #import <SSEventListener/UIViewController+SSShakeEventListener.h>
+#import <SSEventListener/UIView+SSGestureEventListener.h>

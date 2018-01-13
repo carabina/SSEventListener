@@ -12,6 +12,8 @@
 		F9AC7DDC2008D1B300375AAA /* UIViewController+SSShakeEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DD82008D1B300375AAA /* UIViewController+SSShakeEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9AC7DDD2008D1B300375AAA /* NSObject+SSApplicationEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AC7DD92008D1B300375AAA /* NSObject+SSApplicationEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9AC7DDE2008D1B300375AAA /* NSObject+SSApplicationEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */; };
+		F9E7F8A7200A0E2D006E2D46 /* UIView+SSGestureEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = F9E7F8A5200A0E2D006E2D46 /* UIView+SSGestureEventListener.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9E7F8A8200A0E2D006E2D46 /* UIView+SSGestureEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E7F8A6200A0E2D006E2D46 /* UIView+SSGestureEventListener.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		F9AC7DD82008D1B300375AAA /* UIViewController+SSShakeEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SSShakeEventListener.h"; sourceTree = "<group>"; };
 		F9AC7DD92008D1B300375AAA /* NSObject+SSApplicationEventListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SSApplicationEventListener.h"; sourceTree = "<group>"; };
 		F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SSApplicationEventListener.m"; sourceTree = "<group>"; };
+		F9E7F8A5200A0E2D006E2D46 /* UIView+SSGestureEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+SSGestureEventListener.h"; sourceTree = "<group>"; };
+		F9E7F8A6200A0E2D006E2D46 /* UIView+SSGestureEventListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+SSGestureEventListener.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				F9AC7DDA2008D1B300375AAA /* NSObject+SSApplicationEventListener.m */,
 				F9AC7DD82008D1B300375AAA /* UIViewController+SSShakeEventListener.h */,
 				F9AC7DD72008D1B300375AAA /* UIViewController+SSShakeEventListener.m */,
+				F9E7F8A5200A0E2D006E2D46 /* UIView+SSGestureEventListener.h */,
+				F9E7F8A6200A0E2D006E2D46 /* UIView+SSGestureEventListener.m */,
 			);
 			path = SSEventListener;
 			sourceTree = "<group>";
@@ -73,6 +79,7 @@
 			files = (
 				F9AC7DDC2008D1B300375AAA /* UIViewController+SSShakeEventListener.h in Headers */,
 				F9AC7DDD2008D1B300375AAA /* NSObject+SSApplicationEventListener.h in Headers */,
+				F9E7F8A7200A0E2D006E2D46 /* UIView+SSGestureEventListener.h in Headers */,
 				F9AC7DD12008D13800375AAA /* SSEventListener.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9AC7DDE2008D1B300375AAA /* NSObject+SSApplicationEventListener.m in Sources */,
+				F9E7F8A8200A0E2D006E2D46 /* UIView+SSGestureEventListener.m in Sources */,
 				F9AC7DDB2008D1B300375AAA /* UIViewController+SSShakeEventListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

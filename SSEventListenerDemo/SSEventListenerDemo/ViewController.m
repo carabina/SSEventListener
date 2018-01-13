@@ -12,6 +12,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *switchButton;
+@property (weak, nonatomic) IBOutlet UIView *gestureView;
 
 @end
 
@@ -33,6 +34,36 @@
             [strongSelf showAlertViewWithMessage:@"Application received memory warning!"];
         }
     }];
+
+    // set tap event listener for tapView
+    [_gestureView ss_addTapEventListener:^(UITapGestureRecognizer *recognizer){
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf showAlertViewWithMessage:@"Single tapped!"];
+    } numberOfTapsRequired:1];
+
+    [_gestureView ss_addTapEventListener:^(UITapGestureRecognizer *recognizer){
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf showAlertViewWithMessage:@"Double tapped!"];
+    } numberOfTapsRequired:2];
+
+    UIGestureRecognizer *tripleTapRecognizer = [_gestureView ss_addTapEventListener:^(UITapGestureRecognizer *recognizer){
+        __strong typeof(self) strongSelf = weakSelf;
+        [strongSelf showAlertViewWithMessage:@"Triple tapped!"];
+    } numberOfTapsRequired:3];
+
+    // remove listener for triple tap after 5 seconds
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [_gestureView removeGestureRecognizer:tripleTapRecognizer];
+        [self showAlertViewWithMessage:@"Triple tap listener removed!"];
+    });
+
+    // set long press event listener for tapView
+    [_gestureView ss_addLongPressEventListener:^(UILongPressGestureRecognizer *recognizer) {
+        if (recognizer.state == UIGestureRecognizerStateBegan) {
+            __strong typeof(self) strongSelf = weakSelf;
+            [strongSelf showAlertViewWithMessage:@"Long pressed!"];
+        }
+    } minimumPressDuration:2];
 }
 
 - (IBAction)switchButtonTapped:(id)sender {
