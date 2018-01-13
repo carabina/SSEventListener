@@ -11,7 +11,7 @@
 
 static const void *SSShakeEventListenerKey = "SSShakeEventListenerKey";
 
-typedef id _Nullable (*IMP_type)(id _Nonnull, SEL _Nonnull, ...);
+typedef id _Nullable (*SSIMP)(id _Nonnull, SEL _Nonnull, ...);
 static IMP savedMotionEndedWithEventIMP = nil; // saved IMP for method motionEnded:withEvent: of the UIViewController class
 
 @implementation UIViewController (SSShakeEventListener)
@@ -30,10 +30,6 @@ static IMP savedMotionEndedWithEventIMP = nil; // saved IMP for method motionEnd
     objc_setAssociatedObject(self, SSShakeEventListenerKey, nil, OBJC_ASSOCIATION_COPY);
 }
 
-- (SSShakeEventListener)ss_getShakeEventListener {
-    return objc_getAssociatedObject(self, SSShakeEventListenerKey);
-}
-
 #pragma mark - Shake Event
 
 void p_motionEndedWithEvent(id self, SEL _cmd, UIEventSubtype motion, UIEvent *event) {
@@ -45,12 +41,13 @@ void p_motionEndedWithEvent(id self, SEL _cmd, UIEventSubtype motion, UIEvent *e
     }
     
     if (savedMotionEndedWithEventIMP) {
-        IMP_type _imp = (IMP_type)savedMotionEndedWithEventIMP;
+        SSIMP _imp = (SSIMP)savedMotionEndedWithEventIMP;
         _imp(self, _cmd, motion, event);
     }
 }
 
 + (void)p_enableShakeEventListener {
+    // change implementation for motionEnded:withEvent: method of UIViewController class to intercept the method
     savedMotionEndedWithEventIMP = class_replaceMethod([UIViewController class], @selector(motionEnded:withEvent:), (IMP)p_motionEndedWithEvent, "v@:u@");
 }
 

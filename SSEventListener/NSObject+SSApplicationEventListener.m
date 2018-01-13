@@ -30,10 +30,6 @@ static NSObject *appNotificationReceiver = nil;
     [listenerObjs addObject:getWeakObjBlock];
 }
 
-- (SSApplicationEventListener)ss_getApplicationEventListener {
-    return objc_getAssociatedObject(self, SSApplicationEventListenerKey);
-}
-
 - (void)ss_removeApplicationEventListener {
     objc_setAssociatedObject(self, SSApplicationEventListenerKey, nil, OBJC_ASSOCIATION_COPY);
 }

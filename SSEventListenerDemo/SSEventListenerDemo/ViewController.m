@@ -67,11 +67,8 @@
 }
 
 - (IBAction)switchButtonTapped:(id)sender {
-    if ([self ss_getShakeEventListener]) { // check if shake event listener is set
-        // remove shake event listener
-        [self ss_removeShakeEventListener];
-        [_switchButton setTitle:@"Set Shake Event Listener" forState:UIControlStateNormal];
-    } else {
+    static BOOL willSetShakeEventListener = YES;
+    if (willSetShakeEventListener) {
         // set shake event listener for the view controller
         __weak typeof(self) weakSelf = self;
         [self ss_setShakeEventListener:^{
@@ -79,7 +76,12 @@
             [strongSelf showAlertViewWithMessage:@"Shake event detected!"];
         }];
         [_switchButton setTitle:@"Remove Shake Event Listener" forState:UIControlStateNormal];
+    } else {
+        // remove shake event listener
+        [self ss_removeShakeEventListener];
+        [_switchButton setTitle:@"Set Shake Event Listener" forState:UIControlStateNormal];
     }
+    willSetShakeEventListener = !willSetShakeEventListener;
 }
 
 - (void)showAlertViewWithMessage:(NSString *)message {

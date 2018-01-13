@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-// listener block typedefs
+/**
+ * Tap event listener typedef.
+ *
+ * @param recognizer A UITapGestureRecognizer instance associated with the listener.
+ */
 typedef void(^SSTapEventListener)(UITapGestureRecognizer *recognizer);
+
+/**
+ * Long press event listener typedef.
+ *
+ * @param recognizer A UILongPressGestureRecognizer instance associated with the listener.
+ */
 typedef void(^SSLongPressEventListener)(UILongPressGestureRecognizer *recognizer);
 
 @interface UIView (SSGestureEventListener)
