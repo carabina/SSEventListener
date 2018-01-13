@@ -15,7 +15,7 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
 
 #pragma mark - API
 
-- (UIGestureRecognizer *)ss_addTapEventListener:(SSTapEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired {
+- (UIGestureRecognizer *)ss_addTapEventListener:(SSTapViewEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired {
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleTapEvent:)];
     [recognizer setNumberOfTapsRequired:numberOfTapsRequired];
 
@@ -34,7 +34,7 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
     return recognizer;
 }
 
-- (UILongPressGestureRecognizer *)ss_addLongPressEventListener:(SSLongPressEventListener)listener minimumPressDuration:(CFTimeInterval)minimumPressDuration {
+- (UILongPressGestureRecognizer *)ss_addLongPressEventListener:(SSLongPressViewEventListener)listener minimumPressDuration:(CFTimeInterval)minimumPressDuration {
     UILongPressGestureRecognizer *recognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleTapEvent:)];
     recognizer.minimumPressDuration = minimumPressDuration;
 
@@ -47,7 +47,7 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
 #pragma mark - Tap Event Handler
 
 - (void)p_handleTapEvent:(UITapGestureRecognizer *)recognizer {
-    SSTapEventListener listener = objc_getAssociatedObject(recognizer, SSGestureEventListenerKey);
+    SSTapViewEventListener listener = objc_getAssociatedObject(recognizer, SSGestureEventListenerKey);
     if (listener) {
         listener(recognizer);
     }
