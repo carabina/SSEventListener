@@ -48,11 +48,11 @@
             break;
         }
         case 2: {
-            cell.textLabel.text = @"UIView Gesture Event Listener Demo";
+            cell.textLabel.text = @"View Gesture Event Listener Demo";
             break;
         }
         case 3: {
-            cell.textLabel.text = @"UIButton Tap Event Listener Demo";
+            cell.textLabel.text = @"Button Tap Event Listener Demo";
             break;
         }
         default: {
