@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mRI-DI-7bO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,63 +10,261 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--SSEventListener Demo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SSEventListener Demo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXw-vF-HQs">
-                                <rect key="frame" x="100" y="157" width="175" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qK-Kf-RO5">
-                                <rect key="frame" x="102" y="318" width="171" height="30"/>
-                                <state key="normal" title="Set Shake Event Listener"/>
-                            </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dlw-x5-AFA">
-                                <rect key="frame" x="84" y="368" width="207" height="131"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap or Long Press View" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2yl-nZ-hYW">
-                                        <rect key="frame" x="10" y="55" width="187" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="2yl-nZ-hYW" firstAttribute="leading" secondItem="Dlw-x5-AFA" secondAttribute="leading" constant="10" id="GJY-68-3oA"/>
-                                    <constraint firstAttribute="width" constant="207" id="QFv-XZ-YWe"/>
-                                    <constraint firstAttribute="height" constant="131" id="eg1-Hm-0dM"/>
-                                    <constraint firstItem="2yl-nZ-hYW" firstAttribute="top" secondItem="Dlw-x5-AFA" secondAttribute="top" constant="55" id="fUZ-dj-sAF"/>
-                                    <constraint firstAttribute="trailing" secondItem="2yl-nZ-hYW" secondAttribute="trailing" constant="10" id="tZq-dw-2fx"/>
-                                </constraints>
-                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e09-vr-55B">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Dlw-x5-AFA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5mx-WX-e22"/>
-                            <constraint firstItem="jXw-vF-HQs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7NE-IU-xtF"/>
-                            <constraint firstItem="jXw-vF-HQs" firstAttribute="centerX" secondItem="6qK-Kf-RO5" secondAttribute="centerX" id="WDB-bC-klW"/>
-                            <constraint firstItem="6qK-Kf-RO5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m5d-j7-b3w"/>
-                            <constraint firstItem="jXw-vF-HQs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="137" id="mV2-01-zKW"/>
-                            <constraint firstItem="Dlw-x5-AFA" firstAttribute="top" secondItem="6qK-Kf-RO5" secondAttribute="bottom" constant="20" id="wb6-2u-hOY"/>
+                            <constraint firstItem="e09-vr-55B" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ee0-oY-IRF"/>
+                            <constraint firstItem="e09-vr-55B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jw0-RC-uRl"/>
+                            <constraint firstItem="e09-vr-55B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oih-rt-lzR"/>
+                            <constraint firstItem="e09-vr-55B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rcd-8D-jB8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="SSEventListener Demo" id="22s-eA-ez7"/>
                     <connections>
-                        <outlet property="gestureView" destination="Dlw-x5-AFA" id="3xr-Tm-ZDP"/>
-                        <outlet property="shakeSwitchButton" destination="6qK-Kf-RO5" id="FIH-br-dC0"/>
+                        <outlet property="tableView" destination="e09-vr-55B" id="VEU-sb-Yus"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+            <point key="canvasLocation" x="-940" y="120.98950524737631"/>
+        </scene>
+        <!--Shake Event Listener Demo-->
+        <scene sceneID="ad4-xE-E7U">
+            <objects>
+                <viewController storyboardIdentifier="ShakeEventListenerViewController" title="Shake Event Listener Demo" id="xSe-Mc-iu9" customClass="ShakeEventListenerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jCN-cs-oUM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbt-NU-5Ff">
+                                <rect key="frame" x="102" y="318" width="171" height="30"/>
+                                <state key="normal" title="Set Shake Event Listener"/>
+                                <connections>
+                                    <action selector="switchButtonTapped:" destination="xSe-Mc-iu9" eventType="touchUpInside" id="Jlj-sm-DcG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake event listener not set" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2f-iK-5R5">
+                                <rect key="frame" x="16" y="234" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vbt-NU-5Ff" firstAttribute="top" secondItem="F2f-iK-5R5" secondAttribute="bottom" constant="63" id="BwT-Q6-Q05"/>
+                            <constraint firstItem="F2f-iK-5R5" firstAttribute="leading" secondItem="hPP-J5-DLE" secondAttribute="leading" constant="16" id="Ev5-jx-a9o"/>
+                            <constraint firstItem="hPP-J5-DLE" firstAttribute="trailing" secondItem="F2f-iK-5R5" secondAttribute="trailing" constant="16" id="cyo-Ob-fcy"/>
+                            <constraint firstItem="Vbt-NU-5Ff" firstAttribute="centerX" secondItem="jCN-cs-oUM" secondAttribute="centerX" id="dgT-07-fdJ"/>
+                            <constraint firstItem="Vbt-NU-5Ff" firstAttribute="centerY" secondItem="jCN-cs-oUM" secondAttribute="centerY" id="ube-4b-Ibd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hPP-J5-DLE"/>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="F2f-iK-5R5" id="HPo-P4-aGA"/>
+                        <outlet property="switchButton" destination="Vbt-NU-5Ff" id="LLN-oA-bgL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8rF-dJ-4b4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="121"/>
+        </scene>
+        <!--Application Event Listener Demo-->
+        <scene sceneID="Bc2-4v-28I">
+            <objects>
+                <viewController storyboardIdentifier="ApplicationEventListenerViewController" title="Application Event Listener Demo" id="RKH-fW-ft3" customClass="ApplicationEventListenerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QO6-L0-haF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="887-6z-Tbt">
+                                <rect key="frame" x="16" y="240" width="343" height="187"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Jlo-iV-W9A"/>
+                                    <constraint firstAttribute="height" constant="187" id="T7p-qZ-u4I"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Try something like these: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" 1. Return home screen and then return back 2. Simulate memory warning in simulator">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5WI-yl-cXS" firstAttribute="trailing" secondItem="887-6z-Tbt" secondAttribute="trailing" constant="16" id="RGf-yo-A82"/>
+                            <constraint firstItem="887-6z-Tbt" firstAttribute="leading" secondItem="5WI-yl-cXS" secondAttribute="leading" constant="16" id="bwj-5R-wUv"/>
+                            <constraint firstItem="887-6z-Tbt" firstAttribute="centerY" secondItem="QO6-L0-haF" secondAttribute="centerY" id="kLd-6k-268"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5WI-yl-cXS"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fAS-QS-600" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798" y="121"/>
+        </scene>
+        <!--Gesture Event Listener Demo-->
+        <scene sceneID="ePs-5H-xAD">
+            <objects>
+                <viewController storyboardIdentifier="ViewGestureEventListenerViewController" title="Gesture Event Listener Demo" id="kzI-Wl-C71" customClass="ViewGestureEventListenerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PWR-V2-vQO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0Z-qf-bTW">
+                                <rect key="frame" x="92" y="269" width="190" height="190"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="190" id="LFL-DC-Mh2"/>
+                                    <constraint firstAttribute="height" constant="190" id="VQb-96-zmE"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBj-Bg-s0t">
+                                <rect key="frame" x="16" y="118" width="343" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="7l1-xi-wfc"/>
+                                    <constraint firstAttribute="height" constant="143" id="fhj-g7-Vm7"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Try some gestures on the below view: ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" 1. Single tap 2. Double tap 3. Triple tap (very quickly!) 4. Long press">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabel triple tap:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wz-ug-ebC">
+                                <rect key="frame" x="92" y="487" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ozt-8L-ou9">
+                                <rect key="frame" x="229" y="482" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableTripleTapSwitchTapped:" destination="kzI-Wl-C71" eventType="valueChanged" id="DBf-lA-R3n"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x0Z-qf-bTW" firstAttribute="centerX" secondItem="PWR-V2-vQO" secondAttribute="centerX" id="99A-db-uTa"/>
+                            <constraint firstItem="eBj-Bg-s0t" firstAttribute="top" secondItem="9Ep-He-wGI" secondAttribute="top" constant="98" id="9De-CO-iat"/>
+                            <constraint firstItem="6wz-ug-ebC" firstAttribute="top" secondItem="x0Z-qf-bTW" secondAttribute="bottom" constant="28" id="Q5w-Tm-bjE"/>
+                            <constraint firstItem="Ozt-8L-ou9" firstAttribute="leading" secondItem="6wz-ug-ebC" secondAttribute="trailing" constant="8" id="cpF-bb-EMQ"/>
+                            <constraint firstItem="Ozt-8L-ou9" firstAttribute="centerY" secondItem="6wz-ug-ebC" secondAttribute="centerY" id="mBp-Xs-kQN"/>
+                            <constraint firstItem="6wz-ug-ebC" firstAttribute="leading" secondItem="x0Z-qf-bTW" secondAttribute="leading" id="pu0-nD-PSe"/>
+                            <constraint firstItem="9Ep-He-wGI" firstAttribute="trailing" secondItem="eBj-Bg-s0t" secondAttribute="trailing" constant="16" id="pwu-lk-oQq"/>
+                            <constraint firstItem="x0Z-qf-bTW" firstAttribute="top" secondItem="eBj-Bg-s0t" secondAttribute="bottom" constant="8" id="quG-nf-Gxo"/>
+                            <constraint firstItem="eBj-Bg-s0t" firstAttribute="leading" secondItem="9Ep-He-wGI" secondAttribute="leading" constant="16" id="y3t-Dl-2MN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Ep-He-wGI"/>
+                    </view>
+                    <connections>
+                        <outlet property="gestureView" destination="x0Z-qf-bTW" id="FVH-tf-TZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahx-UZ-OkE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1669.5999999999999" y="121.88905547226388"/>
+        </scene>
+        <!--Button Tap Event Listener View Controller-->
+        <scene sceneID="pCM-Df-nXK">
+            <objects>
+                <viewController storyboardIdentifier="ButtonTapEventListenerViewController" id="l0Z-mW-RSF" customClass="ButtonTapEventListenerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QcV-ku-7zR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlG-F9-uuU">
+                                <rect key="frame" x="124" y="312" width="126" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="blp-BA-m1e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Tap Button">
+                                    <color key="titleColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enabel tap:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wI8-tW-t2n">
+                                <rect key="frame" x="124" y="371" width="85.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NM4-7W-2o4">
+                                <rect key="frame" x="217" y="366" width="51" height="31"/>
+                                <connections>
+                                    <action selector="enableTripleTapSwitchTapped:" destination="kzI-Wl-C71" eventType="valueChanged" id="WJo-rg-vcY"/>
+                                    <action selector="switchTapped:" destination="l0Z-mW-RSF" eventType="valueChanged" id="yvD-IP-eR6"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vlG-F9-uuU" firstAttribute="centerX" secondItem="QcV-ku-7zR" secondAttribute="centerX" id="DXf-eb-9Xl"/>
+                            <constraint firstItem="wI8-tW-t2n" firstAttribute="leading" secondItem="vlG-F9-uuU" secondAttribute="leading" id="EIp-mR-0NI"/>
+                            <constraint firstItem="NM4-7W-2o4" firstAttribute="leading" secondItem="wI8-tW-t2n" secondAttribute="trailing" constant="7.5" id="SSu-P5-xn0"/>
+                            <constraint firstItem="wI8-tW-t2n" firstAttribute="top" secondItem="vlG-F9-uuU" secondAttribute="bottom" constant="17" id="i3W-Pe-AvU"/>
+                            <constraint firstItem="vlG-F9-uuU" firstAttribute="centerY" secondItem="QcV-ku-7zR" secondAttribute="centerY" id="vMV-07-d8T"/>
+                            <constraint firstItem="NM4-7W-2o4" firstAttribute="centerY" secondItem="wI8-tW-t2n" secondAttribute="centerY" id="xLv-3K-5WA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tua-LD-OHZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="tapButton" destination="vlG-F9-uuU" id="KsY-Ry-5MX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P9c-eB-yRv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2528.8000000000002" y="120.98950524737631"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O2P-rM-PEj">
+            <objects>
+                <navigationController id="mRI-DI-7bO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XMu-xE-2Ve">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="B9e-0U-cb7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7q-YC-Att" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1775" y="121"/>
         </scene>
     </scenes>
 </document>

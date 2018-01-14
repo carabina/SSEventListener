@@ -13,7 +13,7 @@ static const void *SSTapButtonEventListenerKey = "SSTapButtonEventListenerKey";
 
 @implementation UIButton (SSTapEventListener)
 
-- (void)ss_addTapButtonEventListener:(SSTapButtonEventListener)listener {
+- (void)ss_setTapButtonEventListener:(SSTapButtonEventListener)listener {
     [self addTarget:self action:@selector(p_handleTapEvent:) forControlEvents:UIControlEventTouchUpInside];
     objc_setAssociatedObject(self, SSTapButtonEventListenerKey, listener, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }

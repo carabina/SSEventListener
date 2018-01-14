@@ -21,7 +21,7 @@ typedef void(^SSTapButtonEventListener)(void);
  *
  * @param listener Tap event listener block.
  */
-- (void)ss_addTapButtonEventListener:(SSTapButtonEventListener)listener;
+- (void)ss_setTapButtonEventListener:(SSTapButtonEventListener)listener;
 
 /**
  * Remove tap event listener.

@@ -17,7 +17,7 @@ static const void *SSGestureEventListenerKey = "SSGestureEventListenerKey";
 
 - (UIGestureRecognizer *)ss_addTapViewEventListener:(SSTapViewEventListener)listener numberOfTapsRequired:(NSUInteger)numberOfTapsRequired {
     UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(p_handleGestureEvent:)];
-    [recognizer setNumberOfTapsRequired:numberOfTapsRequired];
+    recognizer.numberOfTapsRequired = numberOfTapsRequired;
 
     // set fail to each existing recognizer who's numberOfTapsRequired is smaller than taps
     NSArray *recognizers = [self gestureRecognizers];
