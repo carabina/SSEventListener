@@ -19,9 +19,35 @@
 
 ## 安装
 
-### CocoaPods
+### 使用CocoaPods安装
 
-CocoaPods支持会在稍后加入，目前请使用手动的方式来安装。
+[CocoaPods](http://cocoapods.org)是一款Objective-C的依赖管理软件，使用CocoaPods可以让你更简单的使用第三方库。如果你还没有安装Cocoapods的话，你可以使用下面的shell命令来安装:
+
+```bash
+$ gem install cocoapods
+```
+
+然后再你的`Podfile`里面引用`SSEventListener`:
+
+```ruby
+target 'TargetName' do
+  pod 'SSEventListener'
+end
+```
+
+然后再运行下面的命令安装新引入的库:
+
+```bash
+$ pod install
+```
+
+在你的工程代码里面导入`SSEventListener`的头文件:
+
+```objectivec
+#import <SSEventListener/SSEventListener.h>
+```
+
+到这里通过CocoaPods安装就完成了，接下来就去`使用方法`模块或者Demo程序工程看看怎么使用这个库吧。
 
 ### 手动安装
 
@@ -39,7 +65,7 @@ CocoaPods支持会在稍后加入，目前请使用手动的方式来安装。
 #import "SSEventListener.h"
 ```
 
-到此安装就完成了，接下来就去`使用方法`模块看看怎么使用这个库吧。
+到此安装就完成了，接下来就去`使用方法`模块或者Demo程序工程看看怎么使用这个库吧。
 
 **注意**: 如果你只想用这个库的某些功能，比如你只想用`SSShakeEventListener`来监听手机摇动，那么你只需要复制`UIViewController+SSShakeEventListener.h/.m`到你的工程里面。
 

@@ -23,7 +23,33 @@ Like to try a demo app? Please download or git clone the repository. Open the `S
 
 ### CocoaPods
 
-CocoaPods support will be available soon. Please install `SSEventListener` manually instead.
+[CocoaPods](http://cocoapods.org) is a dependency management tool for Objective-C, which lets you use 3rd-party libraries easily. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+Specify `SSEventListener` in your `Podfile`:
+
+```ruby
+target 'TargetName' do
+  pod 'SSEventListener'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+
+Import the main header file with:
+
+```objectivec
+#import <SSEventListener/SSEventListener.h>
+```
+
+And you have successfully installed `SSEventListener` library into your project! Refer to the `Usage` section or the demo app project to see how to use the library.
 
 ### Manual
 
