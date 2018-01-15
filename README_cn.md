@@ -146,11 +146,11 @@ $ pod install
 
 因为长按会调用block多次，所以你要检测block回调里面的recognizer的state。 `minimumPressDuration`参数用来设置触发长按事件的最短长按时间。
 
-**注意**: 这些方法都会返回与相应点击事件对应的gesture recognizer，一般情况下你可以用用理会返回值，但是如果你需要删除点击监听的话，那么你就需要保存这些返回值，然后调用`[UIView removeGestureRecognizer:]`来移除监听。
+**注意**: 这些方法都会返回与相应点击事件对应的gesture recognizer，一般情况下你可以不用理会返回值，但是如果你需要删除点击监听的话，那么你就需要保存这些返回值，然后调用`[UIView removeGestureRecognizer:]`来移除监听。
 
  ### Button点击事件监听
 
-因为UIButton是UIView的子类，所以上面提到的手势事件监听同样可以用户button，不过对button设置点击监听的话还是用这里特殊的button点击事件监听比较好，这样的话系统提供的动画效果以及其他的好处都会保留。
+因为UIButton是UIView的子类，所以上面提到的手势事件监听同样可以用于button，不过对button设置点击监听的话还是用这里特殊的button点击事件监听比较好，这样的话系统提供的动画效果以及其他的好处都会保留。
 
 设置button点击事件监听也很简单:
 
