@@ -141,7 +141,7 @@ $ pod install
     // 做你自己的逻辑
     NSLog(@"长按!");
   }
-} minimumPressDuration:2];  // 2 seconds
+} minimumPressDuration:2];  // 2秒
 ```
 
 因为长按会调用block多次，所以你要检测block回调里面的recognizer的state。 `minimumPressDuration`参数用来设置触发长按事件的最短长按时间。
