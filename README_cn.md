@@ -144,7 +144,7 @@ $ pod install
 } minimumPressDuration:2];  // 2 seconds
 ```
 
-因为长按会调用block多次，所以你要检测block回调里面的recognizer的state。 `minimumPressDuration`参数用来设置触发长按时间的最短长按时间。
+因为长按会调用block多次，所以你要检测block回调里面的recognizer的state。 `minimumPressDuration`参数用来设置触发长按事件的最短长按时间。
 
 **注意**: 这些方法都会返回与相应点击事件对应的gesture recognizer，一般情况下你可以用用理会返回值，但是如果你需要删除点击监听的话，那么你就需要保存这些返回值，然后调用`[UIView removeGestureRecognizer:]`来移除监听。
 
