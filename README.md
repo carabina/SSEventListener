@@ -8,7 +8,7 @@
 
 * **Shake Event Listener**: Your view controller doesn't need to override `motionEnded:withEvent:` any more! With `SSEventListener`, you can listener for shake event as simple as this: `[viewController ss_setShakeEventListener:^{ ... }];`
 * **Application Event Listener**: No more NSNotification staff you will need to use. `SSEventListener` endows every object with the power to listen for application lifecycle events like `UIApplicationDidEnterBackgroundNotification`, `UIApplicationWillEnterForegroundNotification` and so on. And the coding part will never rely on separated methods instead of writing something like `[obj ss_setApplicationEventListener:^(NSNotificationName notificationName, UIApplication *application) { ... }];` only.
-* **View Gesture Event Listener**: Currently, `SSEventListener` supports setting listener blocks on a view to listener for single tap gesture, double tap gesture and N-tap gesture if you like, and long press gesture. Setting a single tap gesture listener becomes this way: `[view ss_addTapViewEventListener:^(UITapGestureRecognizer *recognizer) { ... } numberOfTapsRequired:1];`.
+* **View Gesture Event Listener**: Currently, `SSEventListener` supports setting listener blocks on a view to listen for single tap gesture, double tap gesture and N-tap gesture if you like, and long press gesture. Setting a single tap gesture listener becomes this way: `[view ss_addTapViewEventListener:^(UITapGestureRecognizer *recognizer) { ... } numberOfTapsRequired:1];`.
 * **Button Tap Event Listener**: The library also provides a specific tap event listener for button. You can replace your `addTarget...` code with `[button ss_setTapButtonEventListener:^{ ... }];`.
 
 ## Demo App
