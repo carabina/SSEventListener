@@ -144,3 +144,7 @@ CocoaPods支持会在稍后加入，目前请使用手动的方式来安装。
 ## 结语
 
 `SSShakeEventListener`封装了iOS系统对各种事件的监听方式，提供了更好用的**block**形式来设置，如果你追求敏捷开发，那么这个库你不容错过！如果这个库能够帮到你，我会感到非常开心。如果你在使用这个库的过程中发现bug或者你有什么好的建议，请直接在Github上面提issue。如果你想对这个库贡献代码，非常欢迎你提交Pull request!
+
+## 许可
+
+`SSEventListener`使用MIT许可证。详情可查看[LICENSE](LICENSE)。

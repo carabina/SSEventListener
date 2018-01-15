@@ -146,3 +146,7 @@ To remove the listener:
 ## Summary
 
 `SSShakeEventListener` is written for those iOS developers who pursuit agile-development of their applications or frameworks. I appreciate it if the library would help you with writing Objective-C code. If you find any bug or you have any advice you'd like to propose, feel free to open issues on the Github repository. Pull requests are highly welcome!
+
+## License
+
+`SSEventListener` is released under the MIT license. See [LICENSE](LICENSE) for details.
