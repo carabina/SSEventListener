@@ -1,6 +1,8 @@
 # SSEventListener
 
-`SSEventListener` is an iOS library which gives you the simplest way to detect device shake motion, application lifecycle events, view gestures and button tap event using **blocks**! All of the staff behind the library are from iOS system. However, using the library will make your code more beautiful and readable and your development more efficient.
+[README中文入口](README_cn.md)
+
+`SSEventListener` is an iOS library which gives you the simplest way to detect **device shake motion, application lifecycle events, view gestures and button tap event** using **blocks**! All of the staff behind the library are from iOS system. However, using the library will make your code more beautiful and readable and your development more efficient.
 
 ## Features
 
