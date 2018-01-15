@@ -15,6 +15,10 @@
 
 Like to try a demo app? Please download or git clone the repository. Open the `SSEventListener.xcworkspace` with your favorite IDE and run the `SSEventListenerDemo` target. Don't forget to change the signing team with yours in the `SSEventListenerDemo` project settings.
 
+![](Resources/demo1_shake_event.gif) ![](Resources/demo2_application_event.gif)
+
+![](Resources/demo3_view_gesture.gif) ![](Resources/demo4_button_tap_event.gif)
+
 ## Installation
 
 ### CocoaPods

@@ -13,6 +13,10 @@
 
 直接下载或者git clone本仓库，然后打开`SSEventListener.xcworkspace`，替换team签名为你自己的签名，然后运行`SSEventListenerDemo` target即可。
 
+![](Resources/demo1_shake_event.gif) ![](Resources/demo2_application_event.gif)
+
+![](Resources/demo3_view_gesture.gif) ![](Resources/demo4_button_tap_event.gif)
+
 ## 安装
 
 ### CocoaPods
