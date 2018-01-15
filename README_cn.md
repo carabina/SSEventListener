@@ -139,7 +139,7 @@ $ pod install
 [view ss_addLongPressViewEventListener:^(UILongPressGestureRecognizer *recognizer) {
   if (recognizer.state == UIGestureRecognizerStateBegan) {
     // 做你自己的逻辑
-    NSLog(@"Long pressed!");
+    NSLog(@"长按!");
   }
 } minimumPressDuration:2];  // 2 seconds
 ```
